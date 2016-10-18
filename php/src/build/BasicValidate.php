@@ -14,7 +14,10 @@ class BasicValidate implements IBase{
         $d = array();
         $o = array();
         $v = array();
+        $vaild_param = array();
         foreach($data['validate'] as $k=>$vl) {
+            $temp = explode(',', $vl);
+            $vaild_param[] = $temp[0];
             switch ($k){
                 case 'tel':
                     $v[] = static::tel($vl);
@@ -24,6 +27,7 @@ class BasicValidate implements IBase{
             }
         }
         $d['validate'] = $v;
+        $o['v_p'] = $vaild_param;
         return array(
             'data'=>$d,
             'other'=>$o

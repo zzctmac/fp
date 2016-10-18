@@ -1,36 +1,35 @@
 /**
- * Created by <?=$owner?> on <?=$date?>.
+ * Created by ZZC on 2016/10/18.
  */
 
-var <?=$name?> = {
-    api : '<?=$api?>',
-    validate: function(<?=$v_p_str?>) {
+var RegisterCode = {
+    api : '/register/registercheckcode',
+    validate: function(tel) {
         var res = true;
         do{
-            <? foreach($validate as $vaItem) { ?>
-                <?=$vaItem."\n"?>
-            <? } ?>
-        }while (false);
+                            if(!isTel(tel)) {res = '手机号不合法'; break;}
+                    }while (false);
         return res;
     },
     validTip: function(msg) {
-        <?=$vt."\n"?>
+        alert(msg);
     },
-    makeData: function(<?=$m_p_str?>) {
+    makeData: function(tel) {
         return {
-        <?=$md."\n"?>
+        tel:tel,
+        agreement:hex_md5(tel + "mxe")
         };
     },
     callback:function(res) {
         console.log(res);
     },
-    action:function(<?=$p_str?>) {
-        var isValid = this.validate(<?=$v_p_str?>);
+    action:function(tel) {
+        var isValid = this.validate(tel);
         if(true !== isValid) {
             this.validTip(isValid);
             return ;
         }
-        var data = this.makeData(<?=$m_p_str?>);
+        var data = this.makeData(tel);
         var url = base_url + this.api;
         var type = 'GET';
         var dataType = 'JSON';

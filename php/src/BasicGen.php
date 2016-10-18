@@ -28,6 +28,14 @@ class BasicGen implements IGen{
             $data = array_merge($data, $info['data']);
             $other = array_replace_recursive($other, $info['other']);
         }
+        $v_p = $other['v_p'];
+        $m_p = $other['m_p'];
+        $p = array_values(array_unique(array_merge($v_p, $m_p)));
+        $v_p_str = implode(',', $v_p);
+        $m_p_str = implode(',', $m_p);
+        $p_str = implode(',', $p);
+        $temp = compact('v_p_str', 'm_p_str', 'p_str');
+        $data = array_merge($data, $temp);
         
         return $native->fetch('basic.js', $data);
     }
