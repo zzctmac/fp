@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>新用户注册</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="描述">
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <link rel="stylesheet" href="css/ityang.css">
+
+</head>
+
+<body class="yh-fff">
+<header class="yh-bar yh-fff">
+    <a href="javascript:void(0)" onclick="window.history.go(-1)" class="pull-left"><i class="iconfont icon-xiangzuojiantou icon"></i></a>
+    <h1 class="yh-title">新用户注册</h1>
+</header>
+
+<div class="yh-content">
+    <div class="yh-dl">
+        <div class="yh-dl-bd">
+            <div class="weui_cells weui_cells_form">
+                <div class="weui_cell">
+                    <div class="weui_cell_hd"><p class="yh-dl-sjw"><i class="iconfont icon-touxiang-copy-copy hs666"></i> 真实姓名</p></div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <input class="weui_input" type="tel" placeholder="请输入真实姓名">
+                    </div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_hd"><p class="yh-dl-sjw"><i class="iconfont icon-shouji hs666"></i> 手机号</p></div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <input class="weui_input" type="tel" name="phone" placeholder="请输入手机号">
+                    </div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_hd"><p class="yh-dl-sjw"><i class="iconfont icon-iconfont5 hs666"></i> 验证码</p></div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <input class="weui_input" type="number" placeholder="请输入验证码">
+                    </div>
+
+                    <a href="javascript:;" id="checkcodeBtn" class="weui_btn weui_btn_mini weui_btn_default pull-right">60秒重发</a>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_hd"><p class="yh-dl-sjw"><i class="iconfont icon-suo hs666"></i> 密码</p></div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <input class="weui_input" type="number" placeholder="请输入密码">
+                    </div>
+                    <div class="pull-right">
+                        <i class="iconfont icon-yanjing hs999"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="yh-dl-02"><a class="weui_btn weui_btn_yellow" href="m-index.html">绑定</a></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/util/jquery.js"></script>
+<script src="js/util/md5.js"></script>
+<script src="js/util/common.js"></script>
+<script src="js/regisertcode.js"></script>
+</body>
+<script>
+    $("#checkcodeBtn").click(function(){
+        RegisterCode.action($("input[name=phone]").val());
+    });
+</script>
+</html>

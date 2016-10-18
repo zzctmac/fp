@@ -1,0 +1,24 @@
+{
+    "name": "administrator/php",
+    "authors": [
+        {
+            "name": "zzc",
+            "email": "2272713550@qq.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://package.gwdang.com"
+        }
+    ],
+    "require": {
+        "gwdang/config-layer":"1.*",
+        "gwdang/view":"1.*"
+    },
+    "autoload":{
+        "psr-4":{
+            "fp\\":"src/"
+        }
+    }
+}
