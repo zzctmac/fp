@@ -4,6 +4,10 @@
 
 var base_url = 'http://mxe.fh25.com/api';
 
+var Base = {
+    ver_code:null
+};
+
 function isTel(tel) {
     var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
     if (reg.test(tel)) {

@@ -21,7 +21,11 @@ var RegisterCode = {
         };
     },
     callback:function(res) {
-        console.log(res);
+        if(res.code = 1) {
+            Base.ver_code = res.VerificationCode;
+        } else {
+            alert(res.msg);
+        }
     },
     action:function(tel) {
         var isValid = this.validate(tel);
@@ -32,7 +36,7 @@ var RegisterCode = {
         var data = this.makeData(tel);
         var url = base_url + this.api;
         var type = 'GET';
-        var dataType = 'JSON';
+        var dataType = 'JSONP';
         $.ajax({
             url:url,
             type:type,
