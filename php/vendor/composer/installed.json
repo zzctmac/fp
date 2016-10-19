@@ -1,0 +1,170 @@
+[
+    {
+        "name": "gwdang/common",
+        "version": "1.0.39",
+        "version_normalized": "1.0.39.0",
+        "source": {
+            "type": "git",
+            "url": "http://118.144.88.132:8003/gwdang/common.git",
+            "reference": "cf8b1c6cb3ff958067e4b907c297d2364146764d"
+        },
+        "dist": {
+            "type": "tar",
+            "url": "http://package.gwdang.com//dist/gwdang-common-1.0.39-6615df.tar",
+            "reference": "cf8b1c6cb3ff958067e4b907c297d2364146764d",
+            "shasum": "74288bd01fb97bf4c2b250e904dfeb6a526f1d54"
+        },
+        "require": {
+            "gwdang/config-layer": "1.*"
+        },
+        "time": "2016-09-13 07:53:13",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "common\\": "src/"
+            }
+        },
+        "authors": [
+            {
+                "name": "zzc",
+                "email": "2272713550@qq.com"
+            }
+        ]
+    },
+    {
+        "name": "gwdang/config-layer",
+        "version": "1.0.10",
+        "version_normalized": "1.0.10.0",
+        "source": {
+            "type": "git",
+            "url": "http://118.144.88.132:8003/gwdang/config-layer.git",
+            "reference": "cd94fb361dbd94bc398fd9fbaaf64ca1b7bc7542"
+        },
+        "dist": {
+            "type": "tar",
+            "url": "http://package.gwdang.com//dist/gwdang-config-layer-1.0.10-5c8863.tar",
+            "reference": "cd94fb361dbd94bc398fd9fbaaf64ca1b7bc7542",
+            "shasum": "e4dcb6ff923318fe9712e9185e5a5ca492341473"
+        },
+        "require": {
+            "gwdang/common": "1.*"
+        },
+        "time": "2016-09-10 08:38:38",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "config\\": "src/"
+            }
+        },
+        "authors": [
+            {
+                "name": "zzc",
+                "email": "2272713550@qq.com"
+            }
+        ],
+        "description": "config layer"
+    },
+    {
+        "name": "twig/twig",
+        "version": "v1.26.1",
+        "version_normalized": "1.26.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twigphp/Twig.git",
+            "reference": "a09d8ee17ac1cfea29ed60c83960ad685c6a898d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://packagist.phpcomposer.com/files/twigphp/Twig/a09d8ee17ac1cfea29ed60c83960ad685c6a898d.zip",
+            "reference": "a09d8ee17ac1cfea29ed60c83960ad685c6a898d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.7"
+        },
+        "require-dev": {
+            "symfony/debug": "~2.7",
+            "symfony/phpunit-bridge": "~2.7"
+        },
+        "time": "2016-10-05 18:57:41",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.26-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Twig_": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com",
+                "homepage": "http://fabien.potencier.org",
+                "role": "Lead Developer"
+            },
+            {
+                "name": "Armin Ronacher",
+                "email": "armin.ronacher@active-4.com",
+                "role": "Project Founder"
+            },
+            {
+                "name": "Twig Team",
+                "homepage": "http://twig.sensiolabs.org/contributors",
+                "role": "Contributors"
+            }
+        ],
+        "description": "Twig, the flexible, fast, and secure template language for PHP",
+        "homepage": "http://twig.sensiolabs.org",
+        "keywords": [
+            "templating"
+        ]
+    },
+    {
+        "name": "gwdang/view",
+        "version": "1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "http://118.144.88.132:8003/gwdang/view.git",
+            "reference": "1e3b2276e0edc17ac0b47db913a73b4531429a60"
+        },
+        "dist": {
+            "type": "tar",
+            "url": "http://package.gwdang.com//dist/gwdang-view-1.0.3-bb791e.tar",
+            "reference": "1e3b2276e0edc17ac0b47db913a73b4531429a60",
+            "shasum": "48b34150c88b6ad3479effc94e10931229e8a4ba"
+        },
+        "require": {
+            "gwdang/common": "1.*",
+            "twig/twig": "1.*"
+        },
+        "require-dev": {
+            "gwdang/config-layer": "1.*"
+        },
+        "time": "2016-09-03 08:21:39",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "view\\": "src/"
+            }
+        },
+        "authors": [
+            {
+                "name": "zzc",
+                "email": "2272713550@qq.com"
+            }
+        ],
+        "description": "view render"
+    }
+]

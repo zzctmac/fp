@@ -1,0 +1,25 @@
+{
+    "name": "gwdang/config-layer",
+    "description": "config layer",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://package.gwdang.com"
+        }
+    ],
+    "authors": [
+        {
+            "name": "zzc",
+            "email": "2272713550@qq.com"
+        }
+    ],
+    "version": "1.0.10",
+    "autoload": {
+        "psr-4": {
+            "config\\": "src/"
+        }
+    },
+    "require": {
+        "gwdang/common":"1.*"
+    }
+}

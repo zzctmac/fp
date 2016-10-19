@@ -1,0 +1,24 @@
+{
+    "name": "gwdang/common",
+    "authors": [
+        {
+            "name": "zzc",
+            "email": "2272713550@qq.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://package.gwdang.com"
+        }
+    ],
+    "version": "1.0.39",
+    "autoload": {
+        "psr-4": {
+            "common\\": "src/"
+        }
+    },
+    "require": {
+        "gwdang/config-layer":"1.*"
+    }
+}

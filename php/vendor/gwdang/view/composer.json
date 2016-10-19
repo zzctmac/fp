@@ -1,0 +1,29 @@
+{
+    "name": "gwdang/view",
+    "description": "view render",
+    "authors": [
+        {
+            "name": "zzc",
+            "email": "2272713550@qq.com"
+        }
+    ],
+    "version":"1.0.3",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://package.gwdang.com"
+        }
+    ],
+    "require": {
+        "gwdang/common":"1.*",
+        "twig/twig": "1.*"
+    },
+    "require-dev":{
+      "gwdang/config-layer":"1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "view\\": "src/"
+        }
+    }
+}
