@@ -20,6 +20,8 @@ switch ($data['type']) {
         $content = \fp\BasicGen::generate($data);
         break;
     case 'vl':
+        $content =  fp\VlGen::generate($data);
+        break;
         break;
     default:
         exit;

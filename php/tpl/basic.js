@@ -22,7 +22,11 @@ var <?=$name?> = {
         };
     },
     callback:function(res) {
-        console.log(res);
+        if(res.code == 1) {
+
+        } else {
+            alert(res.msg);
+        }
     },
     action:function(<?=$p_str?>) {
         var isValid = this.validate(<?=$v_p_str?>);
